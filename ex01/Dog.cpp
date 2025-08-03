@@ -28,10 +28,10 @@ Dog::Dog( std::string name ): Animal(name)
 }
 
 
-Dog::Dog( const Dog& a ): Animal(a)
+Dog::Dog( const Dog &a ): Animal(a)
 {
 	this->type = a.type;
-	this->brain = a.brain;
+	this->brain = Brain(new Brain(a.brain));
 	return ;
 }
 
