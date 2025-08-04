@@ -6,26 +6,17 @@
 /*   By: sfiorini <sfiorini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 15:24:03 by sfiorini          #+#    #+#             */
-/*   Updated: 2025/06/20 15:25:42 by sfiorini         ###   ########.fr       */
+/*   Updated: 2025/08/04 10:48:13 by sfiorini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-
-Dog::Dog( void ): Animal("dog")
+Dog::Dog( void ): Animal("Dog")
 {
 	std::cout << "Constructor called by Dog" << std::endl;
 	return ;
 }
-
-Dog::Dog( std::string name ): Animal(name)
-{
-	std::cout << "Constructor called by Dog" << std::endl;
-	this->type = type;
-	return ;
-}
-
 
 Dog::Dog( const Dog& a ): Animal(a)
 {

@@ -1,11 +1,9 @@
 NAME = messi
 
-HEADERS = Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp Brain.hpp
-
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -g -std=c++98
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp Brain.cpp 
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp Brain.cpp WrongAnimal.cpp
 
 all: $(NAME) 
 

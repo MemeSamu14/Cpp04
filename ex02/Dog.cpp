@@ -6,14 +6,14 @@
 /*   By: sfiorini <sfiorini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 15:24:03 by sfiorini          #+#    #+#             */
-/*   Updated: 2025/06/17 16:35:27 by sfiorini         ###   ########.fr       */
+/*   Updated: 2025/08/04 10:45:41 by sfiorini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 
-Dog::Dog( void ): Animal()
+Dog::Dog( void ): Animal("Dog")
 {
 	std::cout << "Constructor called by Dog" << std::endl;
 	this->brain = new Brain();
@@ -24,21 +24,23 @@ Dog::Dog( std::string name ): Animal(name)
 {
 	std::cout << "Constructor called by Dog" << std::endl;
 	this->type = type;
+	this->brain = new Brain();
 	return ;
 }
 
 
-Dog::Dog( const Dog& a ): Animal(a)
+Dog::Dog( const Dog &a ): Animal(a)
 {
 	this->type = a.type;
-	this->brain = a.brain;
+	this->brain = new Brain(*a.brain);
 	return ;
 }
 
 Dog&	Dog::operator=( const Dog& a )
 {
 	this->type = a.type;
-	this->brain = a.brain;
+	delete brain;
+	this->brain = new Brain(*a.brain);
 	return (*this);
 }
 

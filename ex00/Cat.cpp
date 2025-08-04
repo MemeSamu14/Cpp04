@@ -6,26 +6,18 @@
 /*   By: sfiorini <sfiorini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 15:24:03 by sfiorini          #+#    #+#             */
-/*   Updated: 2025/06/20 15:25:19 by sfiorini         ###   ########.fr       */
+/*   Updated: 2025/08/04 10:47:13 by sfiorini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 
-Cat::Cat( void ): Animal("cat")
+Cat::Cat( void ): Animal("Cat")
 {
 	std::cout << "Constructor called by Cat" << std::endl;
 	return ;
 }
-
-Cat::Cat( std::string name ): Animal(name)
-{
-	std::cout << "Constructor called by Cat" << std::endl;
-	this->type = type;
-	return ;
-}
-
 
 Cat::Cat( const Cat& a ): Animal(a)
 {
