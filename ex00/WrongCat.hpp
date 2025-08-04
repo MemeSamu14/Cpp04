@@ -6,7 +6,7 @@
 /*   By: sfiorini <sfiorini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 15:22:06 by sfiorini          #+#    #+#             */
-/*   Updated: 2025/06/20 15:39:34 by sfiorini         ###   ########.fr       */
+/*   Updated: 2025/08/04 10:37:16 by sfiorini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class WrongCat: public WrongAnimal
 		WrongCat( const WrongCat& a );
 		WrongCat&	operator=( const WrongCat& a );
 		~WrongCat( void );
+		void	makeSound( void ) const;
+
 };
 
 #endif
